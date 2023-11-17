@@ -30,9 +30,7 @@ if __name__ == "__main__":
     np.random.seed(40)
 
     # Read the wine-quality csv file from the URL
-    csv_url = (
-        "https://raw.githubusercontent.com/mlflow/mlflow/master/tests/datasets/winequality-red.csv"
-    )
+    csv_url = ("https://raw.githubusercontent.com/mlflow/mlflow/master/tests/datasets/winequality-red.csv")
     try:
         data = pd.read_csv(csv_url, sep=";")
     except Exception as e:
@@ -73,13 +71,13 @@ if __name__ == "__main__":
 
         
         # # For remote server only (Dagshub)
-        # remote_server_uri = "https://dagshub.com/entbappy/MLflow-Basic-Demo.mlflow"
-        # mlflow.set_tracking_uri(remote_server_uri)
+        remote_server_uri = "https://dagshub.com/Bhanu-PratapS/mlflow_basics.mlflow"
+        mlflow.set_tracking_uri(remote_server_uri)
 
 
         # For remote server only (AWS)
-        remote_server_uri = "http://ec2-54-147-36-34.compute-1.amazonaws.com:5000/"
-        mlflow.set_tracking_uri(remote_server_uri)
+        #remote_server_uri = "http://ec2-54-147-36-34.compute-1.amazonaws.com:5000/"
+        #mlflow.set_tracking_uri(remote_server_uri)
 
 
 
